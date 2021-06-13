@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Demo Project using Serenity and Cucumber</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="998b82472998a1910634c86b8abf687df22afd8888f0431cfd11ff6a9bf0d210.html">Opencart Page Test</a></span>
+                > <span class="truncate-60"><a
+                    href="b3a61c216a8919ee88f5ce51a0f9de87dd7b03aba4484998a24ccda607c804b4.html">Register the users </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 12-06-2021 17:10</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Opencart Page Test</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Register the users
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given that leider enters the user registry<br>When he enter the registration data<br><table class='embedded'><thead><th>firstNameUser</th><th>lastNameUser</th><th>emailUser</th><th>telephoneUser</th><th>passwordUser</th><th>passwordConfirm</th></thead><tbody><tr><td>&lt;firstNameUser&gt;</td><td>&lt;lastNameUser&gt;</td><td>&lt;emailUser&gt;</td><td>&lt;telephoneUser&gt;</td><td>&lt;passwordUser&gt;</td><td>&lt;passwordConfirm&gt;</td></tr></tbody></table><br>Then Check the message on the screen<br><table class='embedded'><tbody><tr><td>successfulMessage</td></tr><tr><td>&lt;successfulMessage&gt;</td></tr></tbody></table></div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="8dcb5692ebae3b44917e1d1f9ce741230cc590276cf14e82217b34e6e298b620.png" title=" Example: {firstNameUser=leider, lastNameUser=tanos, emailUser=leider311@mail.com, telephoneUser=777777, passwordUser=12345, passwordConfirm=12345, successfulMessage=Congratulations! Your new account has been successfully created!}" width="1366"/>
+                <img src="8dcb5692ebae3b44917e1d1f9ce741230cc590276cf14e82217b34e6e298b620.png" title=" Leider opens the Home opencart page" width="1366"/>
+                <img src="3e3a5c945b099e568d882dcec33e433ebae7c050c2a1a382dadcfd61fe4e375b.png" title=" Given that leider enters the user registry" width="1366"/>
+                <img src="3e3a5c945b099e568d882dcec33e433ebae7c050c2a1a382dadcfd61fe4e375b.png" title=" Leider go to user registration" width="1366"/>
+                <img src="3e3a5c945b099e568d882dcec33e433ebae7c050c2a1a382dadcfd61fe4e375b.png" title=" Leider clicks on click on the user icon" width="1366"/>
+                <img src="ff67da148088fb6421e3108717a3889fa39e522fc4b2326a684b4c3abedf2451.png" title=" Leider clicks on click on the register user" width="1366"/>
+                <img src="17000a52bd8dab1975f0e65d30be4f666393e34fd1b21665d9061c62a0f8d414.png" title=" Leider clicks on click on the configuration button of the https restriction page" width="1366"/>
+                <img src="4df1f5b4c11bd30378442eb3e2fe6040b2970797f716e6779aedc636d6990b92.png" title=" Leider clicks on click the setting link on the https restriction page" width="1366"/>
+                <img src="4df1f5b4c11bd30378442eb3e2fe6040b2970797f716e6779aedc636d6990b92.png" title=" Leider go to user registration (completed)" width="1366"/>
+                <img src="4df1f5b4c11bd30378442eb3e2fe6040b2970797f716e6779aedc636d6990b92.png" title=" Given that leider enters the user registry (completed)" width="1366"/>
+                <img src="f9d977f0e53ab31a1db4ace66bb206cea3d9e7ce2d7c890ea2bf3d1ab3ba0434.png" title=" When he enter the registration data
+| firstNameUser | lastNameUser | emailUser | telephoneUser | passwordUser | passwordConfirm |
+| leider | tanos | leider311@mail.com | 777777 | 12345 | 12345 |" width="1366"/>
+                <img src="f9d977f0e53ab31a1db4ace66bb206cea3d9e7ce2d7c890ea2bf3d1ab3ba0434.png" title=" Leider user data registration" width="1366"/>
+                <img src="f9d977f0e53ab31a1db4ace66bb206cea3d9e7ce2d7c890ea2bf3d1ab3ba0434.png" title=" Leider enters 'leider' into register first name" width="1366"/>
+                <img src="dbca0305c553bd08f80251674ae44f8f6d66101a341b78ede8060ef02a7ee313.png" title=" Leider enters 'tanos' into Register last name" width="1366"/>
+                <img src="47feb535b2fe1f60be1f1518b21bb061c7b61bf380ab94e16bfbf47f37cfbaa5.png" title=" Leider enters 'leider311@mail.com' into Register the Email" width="1366"/>
+                <img src="0c9ca678a6d4bb56c217f3ae20ef44f5cefccee82dcc6207f88b825c8991bb3c.png" title=" Leider enters '777777' into Register the telephone" width="1366"/>
+                <img src="b7508bc3338c61034cb44ef5e8ce3343cd4652d8af1e53161b884957b404656c.png" title=" Leider enters '12345' into Registrar the password" width="1366"/>
+                <img src="d37e3c40fbc3e8cee297b9cd1cf358e0b614618ac64e3825c213900bce26556a.png" title=" Leider enters '12345' into Registrar password confirm" width="1366"/>
+                <img src="89aa223cd05d822cb864fd18e0f675a1b2afb063837e5b3c28558f38b76e1929.png" title=" Leider clicks on click in privacy policy checkbox" width="1366"/>
+                <img src="df0c8c89e73087b218fc6a07a78c24dd7d9b9e0cbcba53231844f69abd199920.png" title=" Leider clicks on click in de button register" width="1366"/>
+                <img src="df0c8c89e73087b218fc6a07a78c24dd7d9b9e0cbcba53231844f69abd199920.png" title=" Leider user data registration (completed)" width="1366"/>
+                <img src="df0c8c89e73087b218fc6a07a78c24dd7d9b9e0cbcba53231844f69abd199920.png" title=" When he enter the registration data
+| firstNameUser | lastNameUser | emailUser | telephoneUser | passwordUser | passwordConfirm |
+| leider | tanos | leider311@mail.com | 777777 | 12345 | 12345 | (completed)" width="1366"/>
+                <img src="df0c8c89e73087b218fc6a07a78c24dd7d9b9e0cbcba53231844f69abd199920.png" title=" Then Check the message on the screen
+| successfulMessage |
+| Congratulations! Your new account has been successfully created! |" width="1366"/>
+                <img src="df0c8c89e73087b218fc6a07a78c24dd7d9b9e0cbcba53231844f69abd199920.png" title=" Then register question" width="1366"/>
+                <img src="df0c8c89e73087b218fc6a07a78c24dd7d9b9e0cbcba53231844f69abd199920.png" title=" Then Check the message on the screen
+| successfulMessage |
+| Congratulations! Your new account has been successfully created! | (completed)" width="1366"/>
+                <img src="df0c8c89e73087b218fc6a07a78c24dd7d9b9e0cbcba53231844f69abd199920.png" title=" Example: {firstNameUser=leider, lastNameUser=tanos, emailUser=leider311@mail.com, telephoneUser=777777, passwordUser=12345, passwordConfirm=12345, successfulMessage=Congratulations! Your new account has been successfully created!} (completed)" width="1366"/>
+                <img src="8dcb5692ebae3b44917e1d1f9ce741230cc590276cf14e82217b34e6e298b620.png" title=" Example: {firstNameUser=Arturo, lastNameUser=tanos, emailUser=leider111@mail.com, telephoneUser=777777, passwordUser=12345, passwordConfirm=12345, successfulMessage=Congratulations! Your new account has been successfully created!}" width="1366"/>
+                <img src="8dcb5692ebae3b44917e1d1f9ce741230cc590276cf14e82217b34e6e298b620.png" title=" Leider opens the Home opencart page" width="1366"/>
+                <img src="8989352057ec5c0ed7c029859893376a4eba0197add18018270cecc0837cd53c.png" title=" Given that leider enters the user registry" width="1366"/>
+                <img src="8989352057ec5c0ed7c029859893376a4eba0197add18018270cecc0837cd53c.png" title=" Leider go to user registration" width="1366"/>
+                <img src="8989352057ec5c0ed7c029859893376a4eba0197add18018270cecc0837cd53c.png" title=" Leider clicks on click on the user icon" width="1366"/>
+                <img src="ff67da148088fb6421e3108717a3889fa39e522fc4b2326a684b4c3abedf2451.png" title=" Leider clicks on click on the register user" width="1366"/>
+                <img src="17000a52bd8dab1975f0e65d30be4f666393e34fd1b21665d9061c62a0f8d414.png" title=" Leider clicks on click on the configuration button of the https restriction page" width="1366"/>
+                <img src="4df1f5b4c11bd30378442eb3e2fe6040b2970797f716e6779aedc636d6990b92.png" title=" Leider clicks on click the setting link on the https restriction page" width="1366"/>
+                <img src="4df1f5b4c11bd30378442eb3e2fe6040b2970797f716e6779aedc636d6990b92.png" title=" Leider go to user registration (completed)" width="1366"/>
+                <img src="4df1f5b4c11bd30378442eb3e2fe6040b2970797f716e6779aedc636d6990b92.png" title=" Given that leider enters the user registry (completed)" width="1366"/>
+                <img src="19868d34b523f2e2178703cfb613201ed1d962bae9cca95cf2a5c9f02da6ff7d.png" title=" When he enter the registration data
+| firstNameUser | lastNameUser | emailUser | telephoneUser | passwordUser | passwordConfirm |
+| Arturo | tanos | leider111@mail.com | 777777 | 12345 | 12345 |" width="1366"/>
+                <img src="19868d34b523f2e2178703cfb613201ed1d962bae9cca95cf2a5c9f02da6ff7d.png" title=" Leider user data registration" width="1366"/>
+                <img src="19868d34b523f2e2178703cfb613201ed1d962bae9cca95cf2a5c9f02da6ff7d.png" title=" Leider enters 'Arturo' into register first name" width="1366"/>
+                <img src="5ec99c9be70d53ac39baf1d1320c670ec4a59529eb52760c7c29f6982e0d1207.png" title=" Leider enters 'tanos' into Register last name" width="1366"/>
+                <img src="3184e7df508ff88d8140468cd43be9415d285343249caffb8e695d845bf2a135.png" title=" Leider enters 'leider111@mail.com' into Register the Email" width="1366"/>
+                <img src="3dc7045ec044ca5078a608a9ccc6002403fad019193282ada5c497cc0158ee97.png" title=" Leider enters '777777' into Register the telephone" width="1366"/>
+                <img src="43b039987d37057aa64078ec60b75d4c04beea606a118ecb0eb4e6ae5be84aaa.png" title=" Leider enters '12345' into Registrar the password" width="1366"/>
+                <img src="d696614be064d8d0da587d3ecc4604e23cd354b84a4ab161e2e190c78f519231.png" title=" Leider enters '12345' into Registrar password confirm" width="1366"/>
+                <img src="c3ab0c343c5ba1bcef1d64ed794b654e97cc6d3f8b131036b5ea310cd2985b76.png" title=" Leider clicks on click in privacy policy checkbox" width="1366"/>
+                <img src="df0c8c89e73087b218fc6a07a78c24dd7d9b9e0cbcba53231844f69abd199920.png" title=" Leider clicks on click in de button register" width="1366"/>
+                <img src="df0c8c89e73087b218fc6a07a78c24dd7d9b9e0cbcba53231844f69abd199920.png" title=" Leider user data registration (completed)" width="1366"/>
+                <img src="df0c8c89e73087b218fc6a07a78c24dd7d9b9e0cbcba53231844f69abd199920.png" title=" When he enter the registration data
+| firstNameUser | lastNameUser | emailUser | telephoneUser | passwordUser | passwordConfirm |
+| Arturo | tanos | leider111@mail.com | 777777 | 12345 | 12345 | (completed)" width="1366"/>
+                <img src="df0c8c89e73087b218fc6a07a78c24dd7d9b9e0cbcba53231844f69abd199920.png" title=" Then Check the message on the screen
+| successfulMessage |
+| Congratulations! Your new account has been successfully created! |" width="1366"/>
+                <img src="df0c8c89e73087b218fc6a07a78c24dd7d9b9e0cbcba53231844f69abd199920.png" title=" Then register question" width="1366"/>
+                <img src="df0c8c89e73087b218fc6a07a78c24dd7d9b9e0cbcba53231844f69abd199920.png" title=" Then Check the message on the screen
+| successfulMessage |
+| Congratulations! Your new account has been successfully created! | (completed)" width="1366"/>
+                <img src="df0c8c89e73087b218fc6a07a78c24dd7d9b9e0cbcba53231844f69abd199920.png" title=" Example: {firstNameUser=Arturo, lastNameUser=tanos, emailUser=leider111@mail.com, telephoneUser=777777, passwordUser=12345, passwordConfirm=12345, successfulMessage=Congratulations! Your new account has been successfully created!} (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.0</span>
+</div>
+</body>
+</html>

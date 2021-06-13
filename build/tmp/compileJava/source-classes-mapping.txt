@@ -1,0 +1,14 @@
+com/sqa/opencartAutomation/models/DataUser.java
+ com.sqa.opencartAutomation.models.DataUser
+com/sqa/opencartAutomation/questions/RegisterQuestion.java
+ com.sqa.opencartAutomation.questions.RegisterQuestion
+com/sqa/opencartAutomation/userinterfaces/ValidateAccountPage.java
+ com.sqa.opencartAutomation.userinterfaces.ValidateAccountPage
+com/sqa/opencartAutomation/userinterfaces/RegisterOpencartPage.java
+ com.sqa.opencartAutomation.userinterfaces.RegisterOpencartPage
+com/sqa/opencartAutomation/tasks/GoToUserRegistration.java
+ com.sqa.opencartAutomation.tasks.GoToUserRegistration
+com/sqa/opencartAutomation/tasks/UserDataRegistration.java
+ com.sqa.opencartAutomation.tasks.UserDataRegistration
+com/sqa/opencartAutomation/userinterfaces/HomeOpencartPage.java
+ com.sqa.opencartAutomation.userinterfaces.HomeOpencartPage
